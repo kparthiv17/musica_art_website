@@ -1,0 +1,244 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - HC'S INSTITUTE OF MUSIC & ARTS</title>
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>
+<body>
+
+    <header>
+        <nav class="topnav">
+            <div class="logo">
+                <img src="image/logo2.png" alt="HC Institute Logo">
+                <div class="logo-text">
+                    <span class="logo-title">HC'S INSTITUTE OF</span>
+                    <span class="logo-subtitle">MUSIC & ARTS</span>
+                </div>
+            </div>
+
+            <div id="myLinks" class="nav-links">
+                <a href="index.html">Home</a>
+               <div class="dropdown">
+                    <a href="#" class="dropbtn">Courses <i class="fa fa-caret-down"></i></a>
+                         <div class="dropdown-content">
+                          <a href="music_course.html">Music Courses <i class="fa fa-caret-right"></i></a>
+                         <a href="art_course.html">Art Courses <i class="fa fa-caret-right"></i></a>
+                        </div>
+                </div>
+              <a href="javascript:void(0)" onclick="openLogin()">Login</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="contact.php">Contact</a>
+            </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </nav>
+    </header>
+
+
+    <section class="about-section">
+        <h2>About Us</h2>
+    </section>
+
+    <section class="join-container">
+        <div class="join-box">
+            <p class="subtitle">"Over the years we have composed a substantial body of Musical and Art works in the 'Western' tradition. There is no language which can stop an Artist to achieve their goals in Music and Art. The purpose of Art is to washing the dust of daily life off our souls. Art and Music is a Healing Therapy. It helps person to calm their mind and find their happiness."</p>
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <div class="why-container">
+            <span class="badge">WHY CHOOSE US</span>
+            <h2 class="why-title">Why our music course is the perfect fit for you</h2>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>Personalized Learning Experience</h3>
+                    <div class="feature-img">
+                        <img src="image/about1.png" alt="Learning Experience">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>Expert Instructors with Industry Experience</h3>
+                    <div class="feature-img">
+                        <img src="image/about2.png" alt="Expert Instructors">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>Comprehensive Curriculum & Resources</h3>
+                    <div class="feature-img">
+                        <img src="image/about3.png" alt="Curriculum">
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-row">
+                <div class="stat-item">
+                    <span class="stat-number">10</span>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <p>Students Enrolled</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <p>Instruments Available</p>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">90        %</span>
+                    <p>Student Satisfaction Rate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+         <footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <div class="logof">
+                <img src="image/logo2.png" alt="HC Institute Logo">
+                <p class="logof-title">HC'S INSTITUTE OF MUSIC & ARTS</p>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown footer-dropdown">
+                    <a href="#" class="dropbtn">Courses <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="music_course.html">Music Courses <i class="fa fa-caret-right"></i></a>
+                        <a href="art_course.html">Art Courses <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hcs_institute_of_music_n_arts/" target="_blank" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@harshcontractor47" target="_blank" class="yt"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 HC's Institute of Music & Arts. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+    
+
+           
+
+
+      <div id="loginModal" class="modal-overlay">
+    <div class="login-card">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+        
+        <div id="loginSection">
+            <h2 class="login-title">Welcome Back!</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <p style="text-align: right; margin-top: -10px; margin-bottom: 5px;">
+                    <a href="javascript:void(0)" onclick="toggleForm('forgot')" style="font-size: 0.8rem; color: #666;">Forgot Password?</a>
+                </p>
+                <button type="submit" name="login_user" class="popup-login-btn">LOGIN</button>
+            </form>
+            <p class="footer-text">Don't have an account? <a href="javascript:void(0)" onclick="toggleForm('signup')">Sign up</a></p>
+        </div>
+
+
+
+        <div id="signupSection" style="display: none;">
+            <h2 class="login-title">Create Account</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <div class="input-box">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                </div>
+                <div class="gender-container">
+                        <div class="radio-group">
+                            <select name="gender" id="genderSelect" class="placeholder-blur" required 
+                                    style="width: 100%; border: none; background: transparent; padding: 12px; outline: none; cursor: pointer;">
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <div class="input-box">
+                        <input type="text" name="birth_date" placeholder="Birth Date" onfocus="(this.type='date')" 
+                               onblur="if(!this.value)this.type='text'" class="placeholder-date" required>
+                    </div>
+                <div class="input-box">
+                    <input type="tel" name="phone" placeholder="Phone number" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="aadhar_number" id="aadharInput" placeholder="Aadhar Number (12 Digits)" maxlength="12" required>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="address" placeholder="Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" id="signupPass" placeholder="Create Password" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+                </div>
+                <div class="terms-container">
+                    <input type="checkbox" id="termsCheckbox" required>
+                    <label for="termsCheckbox">I agree to the Terms & Conditions</label>
+                </div>
+                <br>
+                <button type="submit" name="reg_user" id="signupBtn" class="popup-login-btn" disabled>SIGN UP</button>
+            </form>
+            <p class="footer-text">Already have an account? <a href="javascript:void(0)" onclick="toggleForm('login')">Login</a></p>
+        </div>
+        
+
+
+        <div id="forgotSection" style="display: none;">
+            <h2 class="login-title">Reset Password</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 10px;">Enter details to verify identity</p>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Your Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="aadhar_verify" id="forgotAadhar" placeholder="12 Digit Aadhar Number" maxlength="12" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="new_password" placeholder="Enter New Password" required>
+                </div>
+                <button type="submit" name="reset_password" class="popup-login-btn">UPDATE PASSWORD</button>
+            </form>
+            <p class="footer-text"><a href="javascript:void(0)" onclick="toggleForm('login')">Back to Login</a></p>
+        </div>
+        </div>
+    </div>
+    <script src="js/login.js"></script> 
+</body>
+</html>

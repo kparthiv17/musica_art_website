@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact - HC'S Institute</title>
+    
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <div id="loginModal" class="modal-overlay">
+        <div class="login-card">
+            <span class="close-btn" onclick="closeLogin()">&times;</span>
+            
+            <div id="loginSection">
+                <h2 class="login-title">Welcome Back!</h2>
+                <form class="popup-form" action="auth.php" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <p style="text-align: right; margin-top: -10px; margin-bottom: 5px;">
+                        <a href="javascript:void(0)" onclick="toggleForm('forgot')" style="font-size: 0.8rem; color: #666;">Forgot Password?</a>
+                    </p>
+                    <button type="submit" name="login_user" class="popup-login-btn">LOGIN</button>
+                </form>
+                <p class="footer-text">Don't have an account? <a href="javascript:void(0)" onclick="toggleForm('signup')">Sign up</a></p>
+            </div>
+
+            <div id="signupSection" style="display: none;">
+                <h2 class="login-title">Create Account</h2>
+                <form class="popup-form" action="auth.php" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                    </div>
+                    <div class="gender-container">
+                        <select name="gender" id="genderSelect" required style="width: 100%; border: none; background: transparent; padding: 12px; outline: none; cursor: pointer;">
+                            <option value="" disabled selected>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="birth_date" placeholder="Birth Date" onfocus="(this.type='date')" onblur="if(!this.value)this.type='text'" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="tel" name="phone" placeholder="Phone number" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="aadhar_number" id="aadharInput" placeholder="Aadhar Number (12 Digits)" maxlength="12" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" placeholder="Email Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="address" placeholder="Address" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="password" id="signupPass" placeholder="Create Password" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="terms-container">
+                        <input type="checkbox" id="termsCheckbox">
+                        <label for="termsCheckbox">I agree to the Terms & Conditions</label>
+                    </div>
+                    <br>
+                    <button type="submit" name="reg_user" id="signupBtn" class="popup-login-btn" disabled>SIGN UP</button>
+                </form>
+                <p class="footer-text">Already have an account? <a href="javascript:void(0)" onclick="toggleForm('login')">Login</a></p>
+            </div>
+
+            <div id="forgotSection" style="display: none;">
+                <h2 class="login-title">Reset Password</h2>
+                <form class="popup-form" action="auth.php" method="POST">
+                    <div class="input-box">
+                        <input type="text" name="username" placeholder="Your Username" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="aadhar_verify" id="forgotAadhar" placeholder="12 Digit Aadhar Number" maxlength="12" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="new_password" placeholder="Enter New Password" required>
+                    </div>
+                    <button type="submit" name="reset_password" class="popup-login-btn">UPDATE PASSWORD</button>
+                </form>
+                <p class="footer-text"><a href="javascript:void(0)" onclick="toggleForm('login')">Back to Login</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- 1. MODAL VISIBILITY LOGIC ---
+        window.onload = function() {
+            openLogin();
+        };
+
+
+        function openLogin() {
+            const modal = document.getElementById('loginModal');
+            if (modal) {
+                modal.style.display = 'flex';
+                toggleForm('login'); 
+            }
+        }
+
+        function closeLogin() {
+            window.location.href = 'index.html';
+        }
+
+        function toggleForm(type) {
+            const sections = ['loginSection', 'signupSection', 'forgotSection'];
+            sections.forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.style.display = 'none';
+            });
+            document.getElementById(type + 'Section').style.display = 'block';
+        }
+
+        // --- 2. FORM INTERACTION LOGIC ---
+        document.addEventListener("DOMContentLoaded", function() {
+            const signupForm = document.querySelector("#signupSection form");
+            const termsCheckbox = document.getElementById("termsCheckbox");
+            const signupBtn = document.getElementById("signupBtn");
+            const aadharInput = document.getElementById("aadharInput");
+
+            // Function to handle Enable/Disable of the Sign Up button
+            function updateButtonState() {
+                if (termsCheckbox.checked) {
+                    signupBtn.disabled = false;
+                    signupBtn.style.opacity = "1";
+                    signupBtn.style.cursor = "pointer";
+                } else {
+                    signupBtn.disabled = true;
+                    signupBtn.style.opacity = "0.5";
+                    signupBtn.style.cursor = "not-allowed";
+                }
+            }
+
+            // Apply logic only if elements exist
+            if (termsCheckbox && signupBtn) {
+                // Initial check in case browser caches the checkbox state
+                updateButtonState();
+                
+                // Watch for clicks on the checkbox
+                termsCheckbox.addEventListener("change", updateButtonState);
+            }
+
+            // Final Validation on Submit
+            if (signupForm) {
+                signupForm.addEventListener("submit", function(e) {
+                    const pass = document.getElementById("signupPass").value;
+                    const confirm = document.getElementById("signupConfirm").value;
+                    
+                    if (aadharInput.value.length !== 12) {
+                        alert("Aadhar must be exactly 12 digits.");
+                        e.preventDefault();
+                    } else if (pass !== confirm) {
+                        alert("Passwords do not match!");
+                        e.preventDefault();
+                    }
+                });
+            }
+        });
+    </script> 
+</body>
+</html>

@@ -1,0 +1,659 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Courses - HC'S INSTITUTE OF MUSIC & ARTS</title>
+    
+    <link rel="stylesheet" href="css/music_courses.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" >
+</head>
+<body>
+  <header>
+        <nav class="topnav">
+            <div class="logo">
+                <img src="image/logo2.png" alt="HC Institute Logo">
+                <div class="logo-text">
+                    <span class="logo-title">HC'S INSTITUTE OF</span>
+                    <span class="logo-subtitle">MUSIC & ARTS</span>
+                </div>
+            </div>
+            <div id="myLinks" class="nav-links">
+                <a href="index.html">Home</a>
+               <div class="dropdown">
+                    <a href="#" class="dropbtn">Courses <i class="fa fa-caret-down"></i></a>
+                         <div class="dropdown-content">
+                          <a href="music_course.html">Music Courses <i class="fa fa-caret-right"></i></a>
+                         <a href="art_course.html">Art Courses <i class="fa fa-caret-right"></i></a>
+                        </div>
+                </div>
+
+              <a href="javascript:void(0)" onclick="openLogin()">Login</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.php">Contact</a>
+            </div>
+
+            <div class="search-container">
+            <input type="text" id="courseSearch" placeholder="Search instruments..." onkeyup="filterCourses()">
+            <button type="button"><i class="fa fa-search"></i></button>
+        </div>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+
+        </nav>
+    </header>
+
+
+  <main class="courses-wrapper">
+    <div class="courses-header">
+        <h1>Our Art Courses</h1>
+        <p>Hover over the image to see the more detail about Arts</p>
+    </div>
+    <div class="courses-grid">
+
+
+
+        <!-- COURSE 1 -->
+
+
+        <div class="course-card">
+            <div class="course-media">
+                <div class="media-inner">
+                    <div class="media-front">
+                        <img src="image/canvas.png" alt="Canvas Art">
+                    </div>
+                    <div class="media-back">
+                        <h3>Canvas Art </h3>
+                        <p>Canva art is a modern design style defined by accessibility and professional minimalism. It utilizes a "flat" aesthetic, combining clean geometric vectors with trendy sans-serif typography to create organized, high-end visuals that are globally recognized and easy to produce.</p>
+                        <i class="fa fa-paint-brush" style="font-size: 3rem; margin-top: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="course-content">
+                <h2>Canvas Art</h2>
+                <p class="description">Unlock your creativity and bring your vision to life on canvas.</p>
+                
+                <div class="class-types">
+
+
+                            <div class="class-box">
+                                <h3><i class="fa fa-laptop"></i> Online Class</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹6,000/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹17,100/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹32,400/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹61,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹10,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Canvas Art (Online)', '1 Month', 6000)">1 Month - ₹6,000</button>
+                                        <button onclick="sendToPayment('Canvas Art (Online)', '3 Month', 17100)">3 Month - ₹17,100</button>
+                                        <button onclick="sendToPayment('Canvas Art (Online)', '6 Month', 32400)">6 Month - ₹32,400</button>
+                                        <button onclick="sendToPayment('Canvas Art (Online)', '12 Month', 61440)">12 Month - ₹61,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Online)', '2 Art Combo', 10000)">2 Art Combo - ₹10,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="class-box">
+                                <h3><i class="fa fa-building"></i>Home Tution</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹7,200/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹20,520/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹38,880/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹73,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹10,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Canvas Art (Home)', '1 Month', 7200)">1 Month - ₹7,200</button>
+                                        <button onclick="sendToPayment('Canvas Art (Home)', '3 Month', 20520)">3 Month - ₹20,520</button>
+                                        <button onclick="sendToPayment('Canvas Art (Home)', '6 Month', 38880)">6 Month - ₹38,880</button>
+                                        <button onclick="sendToPayment('Canvas Art (Home)', '12 Month', 73440)">12 Month - ₹73,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Home)', '2 Art Combo', 10000)">2 Art Combo - ₹10,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="class-box offline">
+                                 <h3><i class="fa fa-building"></i> Offline Class (Group) </h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹2,500/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹7,150/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹13,500/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹26,000/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹4,500/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '1 Month', 2500)">1 Month - ₹2,500</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '3 Month', 7150)">3 Month - ₹7,150</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '6 Month', 13500)">6 Month - ₹13,500</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '12 Month', 26000)">12 Month - ₹26,000</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Offline)', '2 Art Combo', 4500)">2 Art Combo - ₹4,500</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <!-- COURSE 2 -->
+
+        <div class="course-card">
+            <div class="course-media">
+                <div class="media-inner">
+                    <div class="media-front">
+                        <img src="image/clay.png" alt="Clay Art">
+                    </div>
+                    <div class="media-back">
+                        <h3>Clay Art </h3>
+                        <p>Claymorphism is a digital design style that emphasizes playful nostalgia and tactile warmth. It mimics the look of hand-molded clay through soft, inflated 3D volumes and matte textures, opting for an organic, "friendly" feel over sharp, industrial perfection.</p>
+                        <i class="fa fa-cubes" style="font-size: 3rem; margin-top: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content">
+                <h2>Clay Art</h2>
+                <p class="description">Master hand-building or wheel-throwing. Cover everything from basic forms to advanced glazing and sculpting techniques.</p>
+                
+                <div class="class-types">
+
+
+                    <div class="class-box">
+                                <h3><i class="fa fa-laptop"></i> Online Class</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹6,000/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹17,100/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹32,400/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹61,440/-</strong></div>
+                                <div class="special-offer">2 Arts  (12 Class) : ₹10,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Clay Art (Online)', '1 Month', 6000)">1 Month - ₹6,000</button>
+                                        <button onclick="sendToPayment('Clay Art (Online)', '3 Month', 17100)">3 Month - ₹17,100</button>
+                                        <button onclick="sendToPayment('Clay Art (Online)', '6 Month', 32400)">6 Month - ₹32,400</button>
+                                        <button onclick="sendToPayment('Clay Art (Online)', '12 Month', 61440)">12 Month - ₹61,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Clay Art (Online)', '2 Art Combo', 10000)">2 Art Combo - ₹10,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="class-box">
+                                <h3><i class="fa fa-building"></i>Home Tution</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹7,200/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹20,520/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹38,880/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹73,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹12,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Clay Art (Home)', '1 Month', 7200)">1 Month - ₹7,200</button>
+                                        <button onclick="sendToPayment('Clay Art (Home)', '3 Month', 20520)">3 Month - ₹20,520</button>
+                                        <button onclick="sendToPayment('Clay Art (Home)', '6 Month', 38880)">6 Month - ₹38,880</button>
+                                        <button onclick="sendToPayment('Clay Art (Home)', '12 Month', 73440)">12 Month - ₹73,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Clay Art (Home)', '2 Art Combo', 12000)">2 Art Combo - ₹12,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="class-box offline">
+                                 <h3><i class="fa fa-building"></i> Offline Class (Group) </h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹2,500/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹7,150/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹13,500/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹26,000/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹4,500/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Clay Art (Offline)', '1 Month', 2500)">1 Month - ₹2,500</button>
+                                        <button onclick="sendToPayment('Clay Art (Offline)', '3 Month', 7150)">3 Month - ₹7,150</button>
+                                        <button onclick="sendToPayment('Clay Art (Offline)', '6 Month', 13500)">6 Month - ₹13,500</button>
+                                        <button onclick="sendToPayment('Clay Art (Offline)', '12 Month', 26000)">12 Month - ₹26,000</button>
+                                        <button class="special-btn" onclick="sendToPayment('Clay Art (Offline)', '2 Art Combo', 4500)">2 Art Combo - ₹4,500</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <!-- COURSE 3 -->
+
+
+        <div class="course-card">
+            <div class="course-media">
+                <div class="media-inner">
+                    <div class="media-front">
+                        <img src="image/drawing.png" alt="Drawing">
+                    </div>
+                    <div class="media-back">
+                        <h3>Drawing</h3>
+                        <p>Drawing is the most intimate form of visual art, serving as a direct link between thought and execution. Centered on the "power of the line," it uses strokes and shading to capture a subject’s essence, prioritizing the raw, rhythmic "human touch" over the sterile precision of digital rendering.</p>
+                        <i class="fa fa-pencil" style="font-size: 3rem; margin-top: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content">
+                <h2>Drawing</h2>
+                <p class="description">Perfect your line work and shading techniques. We offer specialized training for realistic and conceptual illustrations.</p>
+                
+                <div class="class-types">
+
+
+
+                    <div class="class-box">
+                                <h3><i class="fa fa-laptop"></i> Online Class</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹6,000/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹17,100/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹32,400/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹61,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹10,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Drawing (Online)', '1 Month', 6000)">1 Month - ₹6,000</button>
+                                        <button onclick="sendToPayment('Drawing (Online)', '3 Month', 17100)">3 Month - ₹17,100</button>
+                                        <button onclick="sendToPayment('Drawing (Online)', '6 Month', 32400)">6 Month - ₹32,400</button>
+                                        <button onclick="sendToPayment('Drawing (Online)', '12 Month', 61440)">12 Month - ₹61,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Drawing (Online)', '2 Art Combo', 10000)">2 Art Combo - ₹10,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="class-box">
+                                <h3><i class="fa fa-building"></i>Home Tution</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹7,200/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹20,520/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹38,880/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹73,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹12,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Drawing (Home)', '1 Month', 7200)">1 Month - ₹7,200</button>
+                                        <button onclick="sendToPayment('Drawing (Home)', '3 Month', 20520)">3 Month - ₹20,520</button>
+                                        <button onclick="sendToPayment('Drawing (Home)', '6 Month', 38880)">6 Month - ₹38,880</button>
+                                        <button onclick="sendToPayment('Drawing (Home)', '12 Month', 73440)">12 Month - ₹73,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Online)', '2 Art Combo', 12000)">2 Art Combo - ₹12,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="class-box offline">
+                                 <h3><i class="fa fa-building"></i> Offline Class (Group) </h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹2,500/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹7,150/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹13,500/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹26,000/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹4,500/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Drawing (Offline)', '1 Month', 2500)">1 Month - ₹2,500</button>
+                                        <button onclick="sendToPayment('Drawing (Offline)', '3 Month', 7150)">3 Month - ₹7,150</button>
+                                        <button onclick="sendToPayment('Drawing (Offline)', '6 Month', 13500)">6 Month - ₹13,500</button>
+                                        <button onclick="sendToPayment('Drawing (Offline)', '12 Month', 26000)">12 Month - ₹26,000</button>
+                                        <button class="special-btn" onclick="sendToPayment('Drawing (Online)', '2 Art Combo', 4500)"> 2 Art Combo - ₹4,500</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+
+        <!-- COURSE 4 -->
+
+
+        <div class="course-card">
+            <div class="course-media">
+                <div class="media-inner">
+                    <div class="media-front">
+                        <img src="image/mandala.png" alt="Mandala">
+                    </div>
+                    <div class="media-back">
+                        <h3>Mandala</h3>
+                        <p>Mandala art is a geometric expression of spiritual balance and mathematical precision. Starting from a central point, it uses repetitive, intricate layers to represent "unity in diversity," serving as both a hypnotic masterpiece and a practical tool for meditation and focus.</p>
+                        <i class="fa fa-star" style="font-size: 3rem; margin-top: 20px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="course-content">
+                <h2>Mandala Art</h2>
+                <p class="description">Build focus and symmetry. Learn various styles including Dot Mandalas, Zentangle, and Geometric patterns.</p>
+                
+                <div class="class-types">
+
+
+                    <div class="class-box">
+                                <h3><i class="fa fa-laptop"></i> Online Class</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹6,000/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹17,100/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹32,400/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹61,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹10,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Mandala Art (Online)', '1 Month', 6000)">1 Month - ₹6,000</button>
+                                        <button onclick="sendToPayment('Mandala Art (Online)', '3 Month', 17100)">3 Month - ₹17,100</button>
+                                        <button onclick="sendToPayment('Mandala Art (Online)', '6 Month', 32400)">6 Month - ₹32,400</button>
+                                        <button onclick="sendToPayment('Mandala Art (Online)', '12 Month', 61440)">12 Month - ₹61,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Online)', '2 Art Combo', 10000)">2 Art Combo - ₹10,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="class-box">
+                                <h3><i class="fa fa-building"></i>Home Tution</h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹7,200/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹20,520/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹38,880/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹73,440/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹12,000/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Mandala Art (Home)', '1 Month', 7200)">1 Month - ₹7,200</button>
+                                        <button onclick="sendToPayment('Mandala Art (Home)', '3 Month', 20520)">3 Month - ₹20,520</button>
+                                        <button onclick="sendToPayment('Mandala Art (Home)', '6 Month', 38880)">6 Month - ₹38,880</button>
+                                        <button onclick="sendToPayment('Mandala Art (Home)', '12 Month', 73440)">12 Month - ₹73,440</button>
+                                        <button class="special-btn" onclick="sendToPayment('Mandala Art (Home)', '2 Art Combo', 12000)">2 Art Combo - ₹12,000</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="class-box offline">
+                                 <h3><i class="fa fa-building"></i> Offline Class (Group) </h3>
+                                <div class="detail-row"><span>1 Month (8 Class)</span><strong>₹2,500/-</strong></div>
+                                <div class="detail-row"><span>3 Month (24 Class)</span><strong>₹7,150/-</strong></div>
+                                <div class="detail-row"><span>6 Month (48 Class)</span><strong>₹13,500/-</strong></div>
+                                <div class="detail-row"><span>12 Month (96 Class)</span><strong>₹26,000/-</strong></div>
+                                <div class="special-offer">2 Arts (12 Class) : ₹4,500/-</div>
+
+                                <div class="enroll-action-area">
+                                    <button class="enroll-btn" onclick="openDurationPicker(this)">Enroll Now</button>
+
+                                    <div class="duration-picker-overlay">
+                                        <p>Select your plan to proceed:</p>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '1 Month', 2500)">1 Month - ₹2,500</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '3 Month', 7150)">3 Month - ₹7,150</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '6 Month', 13500)">6 Month - ₹13,500</button>
+                                        <button onclick="sendToPayment('Canvas Art (Offline)', '12 Month', 26000)">12 Month - ₹26,000</button>
+                                        <button class="special-btn" onclick="sendToPayment('Canvas Art (Offline)', '2 Art Combo', 4500)">2 Art Combo - ₹4,500</button>
+                                        <button class="close-picker" onclick="closeDurationPicker(this)">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+</main>
+
+
+<div id="verifyModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="icon-circle">
+<i class="fa fa-shield"></i>          </div>
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+        </div>
+        
+        <h2>Student Verification</h2>
+        <p>Enter your registered details to securely proceed to payment.</p>
+        
+        <form action="verify_user.php" method="POST" class="verify-form">
+            <input type="hidden" name="course" id="modalCourse">
+            <input type="hidden" name="fee" id="modalFee"> 
+            
+            <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" name="username" placeholder="Full Name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-envelope"></i>
+                <input type="email" name="email" placeholder="Email Address" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fa fa-phone"></i>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+            </div>
+            
+            <button type="submit" class="verify-btn">
+                Verify & Proceed <i class="fa fa-arrow-right"></i>
+            </button>
+            
+            <p class="signup-prompt">Not registered yet? <a href="javascript:void(0)" onclick="toggleForm('signup')">Create an account</a></p>
+        </form>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-logo">
+            <div class="logof">
+                <img src="image/logo2.png" alt="HC Institute Logo">
+                <p class="logof-title">HC'S INSTITUTE OF MUSIC & ARTS</p>
+            </div>
+        </div>
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown footer-dropdown">
+                    <a href="#" class="dropbtn">Courses <i class="fa fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="music_course.html">Music Courses <i class="fa fa-caret-right"></i></a>
+                        <a href="art_course.html">Art Courses <i class="fa fa-caret-right"></i></a>
+                    </div>
+                </li>
+                <li><a href="javascript:void(0)" onclick="openLogin()">Login</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.php">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/hcs_institute_of_music_n_arts/" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@harshcontractor47" target="_blank" class="yt"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 HC's Institute of Music & Arts. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+
+<!-- Login Modal -->
+      <div id="loginModal" class="modal-overlay">
+    <div class="login-card">
+        <span class="close-btn" onclick="closeLogin()">&times;</span>
+        
+        <div id="loginSection">
+            <h2 class="login-title">Welcome Back!</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Password" required>
+                </div>
+                <p style="text-align: right; margin-top: -10px; margin-bottom: 5px;">
+                    <a href="javascript:void(0)" onclick="toggleForm('forgot')" style="font-size: 0.8rem; color: #666;">Forgot Password?</a>
+                </p>
+                <button type="submit" name="login_user" class="popup-login-btn">LOGIN</button>
+            </form>
+            <p class="footer-text">Don't have an account? <a href="javascript:void(0)" onclick="toggleForm('signup')">Sign up</a></p>
+        </div>
+
+
+
+        <div id="signupSection" style="display: none;">
+            <h2 class="login-title">Create Account</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <div class="input-box">
+                    <input type="text" name="full_name" placeholder="Full Name" required>
+                </div>
+                <div class="gender-container">
+                        <div class="radio-group">
+                            <select name="gender" id="genderSelect" class="placeholder-blur" required 
+                                    style="width: 100%; border: none; background: transparent; padding: 12px; outline: none; cursor: pointer;">
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                <div class="input-box">
+                        <input type="text" name="birth_date" placeholder="Birth Date" onfocus="(this.type='date')" 
+                               onblur="if(!this.value)this.type='text'" class="placeholder-date" required>
+                    </div>
+                <div class="input-box">
+                    <input type="tel" name="phone" placeholder="Phone number" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="aadhar_number" id="aadharInput" placeholder="Aadhar Number (12 Digits)" maxlength="12" required>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" placeholder="Email Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="address" placeholder="Address" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" id="signupPass" placeholder="Create Password" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" id="signupConfirm" placeholder="Confirm Password" required>
+                </div>
+                <div class="terms-container">
+                    <input type="checkbox" id="termsCheckbox" required>
+                    <label for="termsCheckbox">I agree to the Terms & Conditions</label>
+                </div>
+                <br>
+                <button type="submit" name="reg_user" id="signupBtn" class="popup-login-btn" disabled>SIGN UP</button>
+            </form>
+            <p class="footer-text">Already have an account? <a href="javascript:void(0)" onclick="toggleForm('login')">Login</a></p>
+        </div>
+        
+
+
+        <div id="forgotSection" style="display: none;">
+            <h2 class="login-title">Reset Password</h2>
+            <form class="popup-form" action="auth.php" method="POST">
+                <p style="font-size: 0.8rem; color: #666; margin-bottom: 10px;">Enter details to verify identity</p>
+                <div class="input-box">
+                    <input type="text" name="username" placeholder="Your Username" required>
+                </div>
+                <div class="input-box">
+                    <input type="text" name="aadhar_verify" id="forgotAadhar" placeholder="12 Digit Aadhar Number" maxlength="12" required>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="new_password" placeholder="Enter New Password" required>
+                </div>
+                <button type="submit" name="reset_password" class="popup-login-btn">UPDATE PASSWORD</button>
+            </form>
+            <p class="footer-text"><a href="javascript:void(0)" onclick="toggleForm('login')">Back to Login</a></p>
+        </div>
+        </div>
+    </div>
+
+     <script src="js/courses.js"></script>
+    <script src="js/login.js"></script> 
+</body>
+</html>
